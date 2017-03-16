@@ -1,0 +1,92 @@
+eye(3) //identity matrix
+zeros(3) //zero matrix
+rand(3) //3*3 matrix with uniformly distributed between 0 and 1
+ones(3)//one matrix
+magic(3) // generate 3*3 matrix with sum of rows and columns equal
+matrix A/matrix B = A*(B inverse)
+a.*b gives component wise multiplication
+a^2 is a*a matrix
+inv(a) //inverse of a
+det(a) //determinant of a
+eig(a) //eigen value of a
+[a b]=eig(A) //b is containing eigenvalue of A in diagonal and corresponding eigen vector is columns of a
+rank(A) //rank of a matrix
+cond(A) //condition number of matrix
+poly(A) //characteristics polynomial of A i.e ax3+bx2+cx+d value of a,b,c,d will be found
+diag(A) //elements in diagonal of a matrix
+x=[1;2;3] // output 1 2 3
+diag applied on matrix gives vector and vice versa
+norm(A)//L2 norm of a matrix
+A(5) //5th number of matrix counted column wise
+a(1,:) //output first row
+a(:,1) //output first column
+a([1 3],:) //output first and third rows
+sin(2.5)//sin value in radian input
+log(5)//logarithm base 2
+log10(5) //base 10 log
+sind(5)//sin value in degree input
+asin(5) //sin inverse
+exp(3)//exponential
+-----------------------------------------------------------------------------------------------------------------------
+g(x) = x+6
+f(x)= 3x4+5x2+6x+9
+
+in matlab
+f=[3 0 5 6 9]
+g=[1 6]
+polyval(f,1) //value of f at x=1
+conv(f,g) //multiplication of polynomial
+-------------------------------------------------------------------------------------------------------------------------
+For loop
+X=1:2:20
+o/p = 1 3 5 7 9 11 13 15 17 19
+now,
+ for i=1:10
+     disp('Hello')
+ end
+ ------------------------------------------------------------------------------------------------------------------------
+ While loop
+ n=1;
+ while n<=10
+     disp('Hello')
+ n=n+1;
+ end
+ ---------------------------------------------------------------------------------------------------------------------------
+ i=input('Enter a number');
+ for console input
+ ---------------------------------------------------------------------------------------------------------------------------
+ If else condition (elseif could be used)
+ clc;
+clear all;
+n=input('Enter a number');
+if(n>50)
+    disp('Pass');
+else
+    disp('Fail');
+end
+--------------------------------------------------------------------------------------------------------------------------------
+clc;
+clear all;
+i=input('Enter a number : ');
+j=input('Enter a number : ');
+A=zeros(i);
+for k=1:i
+    for m=1:j
+        if k>m
+            A(k,m)=k+m;
+        elseif k==m
+            A(k,m)=k*m;
+        elseif k<m
+            A(k,m)=k-m;
+        end
+    end
+end
+--------------------------------------------------------------------------------------------------------------------------------
+function [a b c d]=gen(A)
+a=det(A)
+b=inv(A)
+c=rank(A)
+d=A'
+
+function name should be same as file name
+-----------------------------------------------------------------------------------------------------------------------------
