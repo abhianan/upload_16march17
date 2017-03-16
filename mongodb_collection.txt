@@ -1,0 +1,4 @@
+show dbs -------to show databases 
+use database_name  -----to switch to that database
+show collections -------- to show table names
+db.collection_name.find() ------to show conten of the table

@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.Scanner;
+
+class Codechef {
+    public static void main(String args[] ) throws Exception {
+        Scanner scan=new Scanner(System.in);
+        int N=scan.nextInt();
+        for(int i=0;i<N;i++){
+            int[] integers = new int[2];
+            for(int j = 0; j < 2; j++)
+                {
+                   integers[j] = scan.nextInt();
+                }
+            int sum=0;
+            for(int k=integers[0];k<=integers[1];k++){
+                sum=sum+fun(k);
+            }
+            System.out.println(sum);
+            System.out.println(fun(5));
+        }
+    }
+    static int fun(int j){
+        int so=0;
+        for(int i=j;;i++){
+            String s=Integer.toString(i);
+            char[] ch=s.toCharArray();
+            int mo=0;
+            for(int m=0;m<ch.length;m++){
+                if(ch[m] != '2' || ch[m] !='5'){
+                    mo=mo+1;
+                    break;
+                }
+            }
+            return mo;
+        }
+    }
+}

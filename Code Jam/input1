@@ -1,0 +1,9 @@
+T=input()
+for i in range(T):
+    N,M=map(int,raw_input().split())
+    lis=[]
+    for j in range(N):
+        p=map(int,raw_input().split())
+        p.sort()
+        lis=lis+[p]
+    print lis
